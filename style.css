@@ -1,0 +1,346 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color:whitesmoke;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #111;
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  position: relative;
+  display: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  color: #e60000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #e60000;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    width: 100%;
+    display: none;
+    padding: 1em 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+header{
+    justify-content: center;
+    display: flex;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:xx-large;
+}
+#dec{
+    justify-content: center;
+    display: flex;
+    font-size:x-large;
+
+}
+img{
+    padding: 70px;
+    margin :20px;
+}
+.about-section {
+    background-color: #ffffff;
+    padding: 30px 10px;
+    max-width: 800px;
+    margin: 10px auto;
+    
+  }
+  .about-section h1 {
+    font-size:xx-large;
+    margin-bottom: 20px;
+    color:#111;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    font-size:large;
+    margin-bottom: 20px;
+    color:#111;
+    text-align: center;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+  }
+  .services-section {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 50px 20px;
+    max-width: 1000px;
+    max-height: 900px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 12px;
+  }
+  
+  .services-section h2 {
+    font-size:xx-large;
+    margin-bottom: 20px;
+    color:#111;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .services-section label {
+    display: block;
+    margin-top:20px;
+    font-weight: bold;
+   
+  }
+  
+  .services-section input, .services-section select, .services-section button {
+    width: 100%;
+    height:50px;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 5px;
+    font-size:large;
+    border-radius: 15px;
+    background-color:#fff;
+  }
+  
+  .services-section button {
+    background-color:#e60000;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .services-section button:hover {
+    background-color: #e55e5e;
+  }
+  .gallery-section {
+    
+    padding: 40px 20px;
+    background-color: #fff;
+    
+  }
+  
+  .gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom:0px;
+    text-align:center;
+    color: rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+  }
+  
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin:0;
+    background-color: #fff;
+  }
+  
+  .gallery-container img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+    background-color: #fff;
+  }
+  
+  .gallery-container img:hover {
+    transform: scale(1.05);
+  }
+  #loader p {
+    font-size: 1.2rem;
+    color: #0f62fe;
+    animation: blink 1.5s infinite;
+  }
+  
+  @keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0.4;}
+    100% {opacity: 1;}
+  }
+/* style.css */
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  color: rgba(238, 229, 229, 0.926);
+  text-align: center;
+  top: 40%;
+}
+.video-container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust darkness */
+  z-index: 0;
+}
+.request-btn {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#help-form input {
+  width: 300px;
+  padding: 8px;
+  margin: 5px 0;
+  font-size: 14px;
+}
+.review-section {
+  background-color: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+}
+
+.review-section h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.review-list {
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.review {
+  background: #fff;
+  border-left: 5px solid #e63946;
+  margin: 15px 0;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review h4 {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.review p {
+  margin: 5px 0;
+  color: #444;
+}
+
+#review-form {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+}
+
+#review-form input,
+#review-form select,
+#review-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#review-form button {
+  background-color: #e63946;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#review-form button:hover {
+  background-color: #d62828;
+}

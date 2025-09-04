@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motoaid</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Motoaid</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li class="navlist"><a href="#">Home</a></li>
+        <li class="navlist"><a href="#about">About us</a></li>
+        <li class="navlist"><a href="#gallery">Services</a></li>
+        <li class="navlist"><a href="#verify-rc">Book Services</a></li>
+      </ul>
+    </nav>
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source
+          src="https://videos.pexels.com/video-files/2053100/2053100-uhd_2560_1440_30fps.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content-overlay">
+        <h1>Motoaid: Help When You Need It Most</h1>
+        <p>Get quick roadside assistance when you’re stuck!</p>
+      </div>
+    </div>
+    <br />
+    <header>
+      <h1>Motoaid</h1>
+    </header>
+    <p id="dec">Get quick roadside assistance when you’re stuck!</p>
+    <section id="about" class="about-section">
+      <h1>About Us</h1>
+      <p>
+        Roadside Help is a fast and reliable assistance platform built
+        specifically for individuals who find themselves stranded on highways
+        due to unexpected vehicle breakdowns — whether it's a flat tire, engine
+        trouble, or battery failure. Our mission is to eliminate the stress and
+        delay often associated with finding roadside help, especially in remote
+        or unfamiliar areas. We leverage location-based technology to instantly
+        connect you with nearby, verified mechanics and service providers —
+        saving you valuable time and energy. No more walking miles or waiting
+        for hours. With Roadside Help, help is just a click away. To further
+        enhance your safety, we've added an optional but highly secure document
+        verification system. You can upload your vehicle’s Registration
+        Certificate (RC) or pollution certificate — allowing us to filter out
+        fake requests and ensure genuine, trusted assistance. This helps protect
+        both you and the service provider, creating a more secure experience for
+        everyone involved. Whether you’re on a solo drive, a road trip with
+        friends, or traveling with family, Roadside Help brings peace of mind
+        right to your location. Imagine being stuck on a highway — and instead
+        of panicking, you tap a button, and within minutes a professional is en
+        route to assist you. To make your journey smoother and more interactive,
+        our site even features animated visuals like a moving car to guide you
+        through the process — adding both clarity and a modern touch to your
+        user experience. We’re not just a service — we’re your travel companion
+        in emergencies, ensuring that help reaches you faster, safer, and
+        smarter.
+      </p>
+    </section>
+    <section id="gallery" class="gallery-section">
+      <h2 color="black">Our Services</h2>
+      <div class="gallery-container">
+        <img
+          src="https://www.drivespark.com/img/2015/01/07-1420605125-punctured-tyre-cover.jpg"
+          alt="Tyre Puncture"
+        />
+        <img
+          src="https://www.shutterstock.com/image-photo/man-driver-hand-refilling-pumping-260nw-2403367023.jpg"
+          alt="Petrol Refill"
+        />
+        <img
+          src="https://www.tvsmotor.com/our-service/our-products-and-offerings/-/media/Corporate/ServicePage/DOS/DOS-RSA.webp?iar=0&hash=05081FD36A33420B677F2175C71144B6"
+          alt="Scooty Repair"
+        />
+        <img
+          src="https://hukumjanab.com/wp-content/uploads/2020/06/servi-2-1.jpg"
+          alt="Bike reapir"
+        />
+        <img
+          src="https://media.gettyimages.com/id/170505414/photo/mechanics-of-a-workshop-at-a-slum-area-repair-an-autorickshaw.jpg?s=612x612&w=gi&k=20&c=dh3X6krKNkJwwPz3J_2Wn74jfRaxagTnjeU73fcRzSU="
+          alt="Car Breakdown"
+        />
+        <img
+          src="https://c02.purpledshub.com/uploads/sites/39/2023/02/GettyImages-615281154-4d3a25e.jpg?w=1029&webp=1"
+          alt="Cycle repair"
+        />
+        <img
+          src="https://t4.ftcdn.net/jpg/02/59/92/03/360_F_259920398_m4nAXGQUxm1TUFOdeNYXCn6OZeuetTCW.jpg"
+          alt="tyre change"
+        />
+        <img
+        src="https://media.istockphoto.com/id/1422111028/photo/woman-driver-using-mobile-phone-during-problem-car-breakdown-or-broken-car-on-road-vehicle.jpg?s=612x612&w=0&k=20&c=BQPGUzW_8nd02JTNe_W4EuwlFKEZXx4wdYLsxwTVqWY="
+        alt="mechanical breakdown">
+      </div>
+    </section>
+
+    <section id="verify-rc" class="services-section">
+      <h2>Register your problem</h2>
+
+      <!-- RC Upload Form -->
+      <div id="rc-verification">
+        <label for="rcUpload">Upload Your RC Document:</label>
+        <input
+          type="file"
+          id="rcUpload"
+          accept=".jpg, .jpeg, .png, .pdf"
+          required
+        />
+        <button onclick="verifyRC()">Verify RC</button>
+      </div>
+      <!-- Loader for RC Verification -->
+      <div id="loader" style="display: none; margin-top: 20px">
+        <p>Verifying RC... Please wait ⏳</p>
+      </div>
+
+      <!-- Problem Selection (Hidden initially) -->
+      <div id="problem-selection" style="display: none; margin-top: 20px">
+        <label for="problem">Select Your Problem:</label>
+        <select id="problem" required>
+          <option value="">-- Choose a Service --</option>
+          <option value="petrol">Petrol Refill</option>
+          <option value="diesel">Diesel Refill</option>
+          <option value="mechanical">Mechanical Problem</option>
+          <option value="accident">Accident Assistance</option>
+          <option value="tyre">Tyre Puncture</option>
+        </select>
+        <div id="location-form" style="display: none; margin-top: 20px">
+          <h3>Enter your location details</h3>
+          <label for=" pincode"> Pin Code:</label>
+          <input
+            type="text"
+            id=" pincode"
+            maxlength="6"
+            required
+            placeholder="Enter 6 digit pin code"
+          />
+          <label for="state">State:</label>
+          <select id=" state " required>
+            <option value="">--Select State--</option>
+            <option value="uttarpradesh">Uttar Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+          </select>
+          <label for="highway">Highway Name/Number</label>
+          <input type="text" id="highway" required placeholder="" />
+          <label for="country">Country:</label>
+          <input type="input" id="country" value="India" readonly />
+          
+        </div>
+        <button onclick="showform()" class="request-btn">Request Help</button>
+      </div>
+    </section>
+    <section id="reviews" class="review-section">
+  <h2>What Our Users Say</h2>
+
+  <!-- Displayed Reviews -->
+  <div id="review-list" class="review-list">
+    <div class="review">
+      <h4>Ritika Sharma</h4>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>Super fast service! Got my flat tyre fixed within 20 minutes. Highly recommended!</p>
+    </div>
+    <div class="review">
+      <h4>Aarav Mehta</h4>
+      <p>⭐⭐⭐⭐</p>
+      <p>I was stranded on the highway and Motoaid really came to my rescue. Great support team!</p>
+    </div>
+  </div>
+
+  <!-- Review Form -->
+  <form id="review-form" onsubmit="submitReview(event)">
+    <h3>Leave a Review</h3>
+    <input type="text" id="reviewer-name" required placeholder="Your Name" />
+    <select id="reviewer-rating" required>
+      <option value="">Select Rating</option>
+      <option value="⭐">⭐</option>
+      <option value="⭐⭐">⭐⭐</option>
+      <option value="⭐⭐⭐">⭐⭐⭐</option>
+      <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+      <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+    </select>
+    <textarea id="review-text" rows="4" required placeholder="Write your review here..."></textarea>
+    <button type="submit">Submit Review</button>
+  </form>
+</section>
+
+  </body>
+</html>
