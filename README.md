@@ -5,7 +5,8 @@ Help When You Need It the Most – 24/7 Roadside Assistance
 
 📌 Overview
 
-MotoAid is a web-based roadside assistance platform designed to provide quick and reliable help during vehicle breakdowns. Whether it’s a flat tyre, dead battery, or major repair, MotoAid connects users with verified mechanics nearby using real-time geolocation.
+MotoAid is a web-based roadside assistance platform designed to provide quick and reliable help during vehicle breakdowns.
+Whether it’s a flat tyre, dead battery, or major repair, MotoAid connects users with verified mechanics nearby using real-time geolocation.
 Our mission is to ensure that no driver is ever left stranded on the road, by offering affordable, fast, and secure roadside support across India.
 
 🚨 Problem Statement
@@ -50,6 +51,3 @@ Customer-first approach
 🖥️ Tech Stack
 
 Frontend: HTML, CSS, JavaScript
-APIs: Google Maps API (location tracking), Payment Gateway API
-
-Hosting: AWS / Heroku
